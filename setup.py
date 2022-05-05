@@ -28,7 +28,7 @@ setup(
             "License :: OSI Approved :: MIT License",
             "Operating System :: OS Independent",
         ),
-        keywords ='Find and Move by Yatharth Gupta',
+        keywords ='FindAndMove Yatharth YatharthGupta',
         install_requires = requirements,
         zip_safe = False
 )
