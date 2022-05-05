@@ -11,15 +11,18 @@ def mover(args):
                 lines = f.read()
                 if lines.lower().find(keyword.lower()) != -1:
                     moving_files.append(file)
-    print(f"Files Containing {keyword} are {moving_files}")                 
-    try:
-        os.mkdir(f"{path}/{keyword}", 0o666)
-        print("Directory Created")
-    except FileExistsError:
-        print("Directory already exists")
+    if len(moving_files) != 0:
+        print(f"Files Containing {keyword} are {moving_files}")                 
+        try:
+            os.mkdir(f"{path}/{keyword}", 0o666)
+            print("Directory Created")
+        except FileExistsError:
+            print("Directory already exists")
 
-    for file in moving_files:
-        os.rename(f'{path}/{file}', f'{path}/{keyword}/{file}')
+        for file in moving_files:
+            os.rename(f'{path}/{file}', f'{path}/{keyword}/{file}')
+    else:
+        print("No files contain the keyword: f{keyword}")
 def main():
     parser = argparse.ArgumentParser(description = "Move files that contain the keyword")
     parser.add_argument('-k', '--keyword',default = None, type=str, help='Keyword to search for')
