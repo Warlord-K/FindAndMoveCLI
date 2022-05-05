@@ -2,7 +2,7 @@
 Find And Move
 ======
 
-CLI tool that scrapes through all the text files in the specified directory(Defaults to the current directory by default).
+CLI tool that scrapes through all the text files in the specified directory(Defaults to the current directory by default) and then searches through each file for the provided keyword. All the files that contain the keyword are moved to a folder with the name of a keyword(A New folder will be created if it does not exist).
 
 Installation
 ============
