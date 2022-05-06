@@ -16,6 +16,11 @@ git clone https://github.com/Warlord-K/FindAndMoveCLI.git
 ```
 cd mover
 ```
+Install setuptools if not already installed
+
+```
+pip install setuptools
+```
 
 Run the following command to perform a local Install
 ```
